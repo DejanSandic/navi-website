@@ -640,4 +640,4 @@ The generator function is called once for each new `request`. Given that the mat
 
 Generators are a useful way to solve this problem. A generator can immediately yield a **'busy'** segment that indicates that more data is to come, and then yield a final segment once it's available. In the meantime, it can call child generators and yield their results as appropriate.
 
-Because matchers are just generators, it's possible to create your own matchers. As an example, it would be possible to create a `withTimeout()` function that returns a matcher that emits an error is its child matchers take too much time to resolve.
+Because matchers are just generators, it's possible to create your own matchers. As an example, it would be possible to create a `withTimeout()` function that returns a matcher that emits an error if its child matchers take too much time to resolve.
